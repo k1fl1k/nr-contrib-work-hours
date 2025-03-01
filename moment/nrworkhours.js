@@ -1,11 +1,5 @@
 "use strict";
 
-/**
- * Checks if the given timestamp falls within working hours (9:00-18:00).
- * @param {Object} msg - Node-RED message object.
- * @param {Object} node - Node instance.
- * @returns {Object|null} - Updated message object or null on error.
- */
 function checkWorkingHours(msg, node) {
   const inputKey = node.input_key || "timestamp";
   const outputKey = node.output_key || "in_working_hours";
