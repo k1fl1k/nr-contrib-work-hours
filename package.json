@@ -1,5 +1,5 @@
 {
-  "name": "nr-contrib-working-hours-check",
+  "name": "nr-contrib-work-hours",
   "version": "1.0.0",
   "description": "Node-Red Node that checks if a timestamp falls within working hours (9:00-18:00).",
   "scripts": {
