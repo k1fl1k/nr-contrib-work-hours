@@ -1,26 +1,24 @@
 {
-  "name": "nr-contrib-timestamp-diff",
+  "name": "nr-contrib-working-hours-check",
   "version": "1.0.0",
-  "description": "Node-Red Node that calculates the difference between two timestamps.",
+  "description": "Node-Red Node that checks if a timestamp falls within working hours (9:00-18:00).",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "moment": "^2.29.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node-red": "^1.1.0"
   },
   "keywords": [
     "node-red",
     "timestamp",
-    "time",
-    "difference"
+    "working-hours",
+    "time-check"
   ],
   "node-red": {
     "version": ">=3",
     "nodes": {
-      "timestamp-diff": "moment/nrtimestampdiff.js"
+      "working-hours-check": "working-hours-check.js"
     }
   },
   "engines": {
@@ -33,6 +31,6 @@
     "not dead",
     "not ie < 11"
   ],
-  "main": "moment/nrtimestampdiff.js",
+  "main": "working-hours-check.js",
   "license": "MIT"
 }
