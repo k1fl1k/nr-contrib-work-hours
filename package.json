@@ -18,7 +18,7 @@
   "node-red": {
     "version": ">=3",
     "nodes": {
-      "working-hours-check": "working-hours-check.js"
+      "working-hours-check": "workhours.js"
     }
   },
   "engines": {
@@ -31,6 +31,6 @@
     "not dead",
     "not ie < 11"
   ],
-  "main": "working-hours-check.js",
+  "main": "workhours.js",
   "license": "MIT"
 }
