@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    RED.nodes.registerType("working-hours-check", {
+        category: "function",
+        color: "#a6bbcf",
+        defaults: {
+            input_key: { value: "timestamp", required: true },
+            output_key: { value: "in_working_hours", required: true }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-clock-o",
+        label: function () {
+            return this.name || "Working Hours Check";
+        },
+        oneditprepare: function () {
+            $("#node-input-input_key").typedInput({ types: ["str"] });
+            $("#node-input-output_key").typedInput({ types: ["str"] });
+        }
+    });
+</script>
+
+
+<script type="text/x-red" data-template-name="working-hours-check">
+    <div class="form-row">
+        <label for="node-input-input_key"><i class="fa fa-clock-o"></i> Input Key</label>
+        <input type="text" id="node-input-input_key" placeholder="timestamp">
+    </div>
+    <div class="form-row">
+        <label for="node-input-output_key"><i class="fa fa-sign-out"></i> Output Key</label>
+        <input type="text" id="node-input-output_key" placeholder="in_working_hours">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="working-hours-check">
+    <p>This node checks if a given timestamp falls within working hours (9:00-18:00).</p>
+    <p><strong>Input Key:</strong> The key for the timestamp in the incoming message.</p>
+    <p><strong>Output Key:</strong> The key where the result (true/false) will be stored.</p>
+</script>
